@@ -1,0 +1,150 @@
+
+:root {
+    --main-color-tienda: #08b464;
+}
+
+.text-tienda {
+    color: var(--main-color-tienda) !important;
+}
+
+.bg-tienda {
+    background-color: var(--main-color-tienda) !important;
+}
+
+.border-tienda {
+    border-bottom: 1px solid var(--main-color-tienda) !important;
+}
+
+.show > .nav-link,
+    .nav-link.active {
+      color: var(--main-color-tienda) !important;
+    }
+
+.nav-link:hover {
+    color: var(--main-color-tienda) !important;
+}
+
+.breadcrumb-item.active {
+    color: var(--main-color-tienda)
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: #fff;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button{
+    padding-left: 2rem!important;
+}
+
+.accordion-button::after {
+    position: absolute;
+    left: 0em;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2308b464'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+
+.accordion-item {
+    border: none;
+}
+
+.form-range::-webkit-slider-thumb{
+    background: #000;
+    border-radius: 0%;
+}
+
+.form-range:focus::-webkit-slider-thumb{
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.form-range::-moz-range-thumb{
+    background: #000;
+    border-radius: 0%;
+}
+
+.form-range:focus::-moz-range-thumb{
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.form-range::-ms-thumb{
+    background: #000;
+    border-radius: 0%;
+}
+
+.form-range:focus::-ms-thumb{
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.btn-tienda{
+    border-bottom: 1px solid var(--main-color-tienda) !important;
+    border-radius: 0.25rem!important;
+    margin-right: 0.25rem!important;
+    margin-top: 0.25rem!important;
+    width: 2.5em;
+    padding: 5px 0;
+}
+
+.btn-tienda.active, .btn-tienda:hover {
+    background-color: var(--main-color-tienda) !important;
+}
+
+.form-check-input:checked[type=checkbox] {
+    background-image: none !important;
+}
+
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(253, 245, 13, 0.25);
+}
+
+.redes-sociales {
+    margin: 1rem auto;
+}
+
+.list-group-item {
+    padding-left: 0!important;
+    padding-bottom: 0;
+}
+
+.form-select{
+    width: auto;
+}
+
+.form-select:focus{
+    box-shadow: none;
+}
+
+.star-color{
+    color: #ffc107;
+}
+
+.add-cart:hover {
+    background-color: var(--main-color-tienda) !important;
+    border-bottom: 1px solid var(--main-color-tienda) !important;
+    color: white !important;
+}
+
+.page-link {
+    border: none;
+    color: #000;
+}
