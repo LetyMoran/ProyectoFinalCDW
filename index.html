@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
 		integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	
+
 	<title>Tienda virtual</title>
 </head>
 
@@ -33,9 +33,10 @@
 			<div class="row">
 				<div class="col-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
-						<div class="container-fluid">
-							<a class="text-tienda navbar-brand" href="#">RENOSHOP<span class="text-dark">BEE</span></a>
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						<div class="container-fluid navbar-tienda d-flex bd-highlight">
+							<a class="text-tienda navbar-brand flex-grow-1 bd-highlight" href="#">RENOSHOP<span
+									class="text-dark">BEE</span></a>
+							<button class="navbar-toggler bd-highlight" type="button" data-bs-toggle="collapse"
 								data-bs-target="#menu" aria-controls="navbarNav" aria-expanded="false"
 								aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
@@ -61,22 +62,383 @@
 										<a class="nav-link" href="#">ACCESSORIES</a>
 									</li>
 								</ul>
-								<div class="d-flex">
-									<button type="button" class="btn position-relative">
-										<i class="fa-solid fa-cart-shopping"></i>
-										<span
-											class="position-absolute top-0 mt-1 start-80 translate-middle badge rounded-pill bg-tienda">
-											3
-											<span class="visually-hidden">unread messages</span>
-										</span>
-									</button>
+							</div>
+							<div class="d-flex bd-highlight">
+								<button type="button" class="btn position-relative">
+									<i class="fa-solid fa-cart-shopping"></i>
+									<span
+										class="position-absolute top-0 mt-1 start-80 translate-middle badge rounded-pill bg-tienda">
+										3
+										<span class="visually-hidden">unread messages</span>
+									</span>
+								</button>
 
-									<button type="button" class="btn">
-										<i class="fa-solid fa-magnifying-glass"></i>
-									</button>
+								<button type="button" class="btn">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</button>
+
+								<button class="btn filtros-tienda-icon" type="button" data-bs-toggle="offcanvas"
+									data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+									<i class="fa-solid fa-filter"></i>
+								</button>
+
+								<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+									id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+									<div class="offcanvas-header">
+										<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Filtros</h5>
+										<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+											aria-label="Close"></button>
+									</div>
+									<div class="offcanvas-body">
+										<div class="col-12 ">
+											<!-- Acordeón de categorias --- Start -->
+												<div class="row">
+													<div class="col-12 border-bottom pb-4">
+														<p class="text-uppercase">Categories</p>
+														<div class="accordion accordion-flush" id="categories">
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingOne">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseOne"
+																		aria-expanded="false" aria-controls="flush-collapseOne">
+																		Accessories (15)
+																	</button>
+																</h2>
+																<div id="flush-collapseOne" class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingOne"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingTwo">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseTwo"
+																		aria-expanded="false" aria-controls="flush-collapseTwo">
+																		Dresses (50)
+																	</button>
+																</h2>
+																<div id="flush-collapseTwo" class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingTwo"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingThree">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseThree"
+																		aria-expanded="false"
+																		aria-controls="flush-collapseThree">
+																		Women (150)
+																	</button>
+																</h2>
+																<div id="flush-collapseThree"
+																	class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingThree"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2 </div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingFour">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseFour"
+																		aria-expanded="false"
+																		aria-controls="flush-collapseFour">
+																		Men (150)
+																	</button>
+																</h2>
+																<div id="flush-collapseFour" class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingFour"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2 </div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingFive">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseFive"
+																		aria-expanded="false"
+																		aria-controls="flush-collapseFive">
+																		Watch (153)
+																	</button>
+																</h2>
+																<div id="flush-collapseFive" class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingFive"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2 </div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingSix">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseSix"
+																		aria-expanded="false" aria-controls="flush-collapseSix">
+																		Clothing (153)
+																	</button>
+																</h2>
+																<div id="flush-collapseSix" class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingSix"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2 </div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+															<div class="accordion-item">
+																<h2 class="accordion-header" id="flush-headingSeven">
+																	<button class="accordion-button collapsed pb-1"
+																		type="button" data-bs-toggle="collapse"
+																		data-bs-target="#flush-collapseSeven"
+																		aria-expanded="false"
+																		aria-controls="flush-collapseSeven">
+																		Rags (150)
+																	</button>
+																</h2>
+																<div id="flush-collapseSeven"
+																	class="accordion-collapse collapse"
+																	aria-labelledby="flush-headingSeven"
+																	data-bs-parent="#categories">
+																	<ol class="list-group list-group">
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 1
+																			</div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 2 </div>
+																		</li>
+																		<li
+																			class="list-group-item d-flex justify-content-between align-items-start">
+																			<div class="ms-2 me-auto">
+																				Item 3
+																			</div>
+																		</li>
+																	</ol>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											<!-- Acordeón de categorias --- End -->
+
+											<!-- Filtro de precios --- Start -->
+												<div class="row">
+													<div class="col-12 border-bottom">
+														<div class="py-4">
+															<label for="filter" class="form-label text-uppercase">Price
+																Filter</label>
+															<input type="range" class="form-range" id="filter">
+
+															<div class="input-group mb-3 mt-3">
+																<input type="text" placeholder="$10"
+																	class="form-control rounded-0 text-center" aria-label="min">
+																<input type="text" placeholder="$3000"
+																	class="form-control rounded-0 mx-3 text-center"
+																	aria-label="max">
+																<button
+																	class="btn btn-outline-secondary rounded-0 bg-tienda text-white px-3 border-tienda""
+											type=" button"><i class="fa-solid fa-magnifying-glass"></i></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											<!-- Filtro de precios --- End -->
+
+											<!-- Filtro de tallas --- Start -->
+												<div class="row">
+													<div class="col-12 border-bottom">
+														<div class="py-4">
+															<p class="text-uppercase">Sizes</p>
+															<div class="d-flex flex-wrap">
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">XS</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda active">S</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">M</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">L</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">SL</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">XL</button>
+																<button type="button"
+																	class="btn btn-outline-secondary btn-tienda">XXL</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											<!-- Filtro de tallas --- End -->
+
+											<!-- Colores --- Start -->
+												<div class="row">
+													<div class="col-12 border-bottom">
+														<div class="py-4">
+															<p class="text-uppercase">Colors</p>
+															<div class="">
+																<div class="form-check">
+																	<input class="form-check-input" type="checkbox" value=""
+																		id="color-black">
+																	<label class="form-check-label" for="color-black">
+																		Black
+																	</label>
+																</div>
+																<div class="form-check">
+																	<input class="form-check-input" type="checkbox" value=""
+																		id="color-white">
+																	<label class="form-check-label" for="color-white">
+																		White
+																	</label>
+																</div>
+																<div class="form-check">
+																	<input class="form-check-input" type="checkbox" value=""
+																		id="color-blue">
+																	<label class="form-check-label" for="color-blue">
+																		Blue
+																	</label>
+																</div>
+																<div class="form-check">
+																	<input class="form-check-input" type="checkbox" value=""
+																		id="color-yellow">
+																	<label class="form-check-label" for="color-yellow">
+																		Yellow
+																	</label>
+																</div>
+																<div class="form-check">
+																	<input class="form-check-input" type="checkbox" value=""
+																		id="color-green">
+																	<label class="form-check-label" for="color-green">
+																		Green
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											<!-- Colores --- End -->
+										</div>
+									</div>
 								</div>
 							</div>
-
 						</div>
 					</nav>
 				</div>
@@ -84,9 +446,9 @@
 		</header>
 	</div>
 
-	<div class="container mt-5">
+	<div class="container mt-5 container-tienda">
 		<div class="row">
-			<div class="col-12 p-4">
+			<div class="col-8 p-4 d-flex align-items-center breadcrumb-tienda">
 				<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 					<ol class="breadcrumb m-0">
 						<li class="breadcrumb-item">Home</li>
@@ -99,7 +461,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-4 p-4">
+			<div class="col-md-4 col-sm-12 p-4 filtros-tienda-list">
 				<!-- Acordeón de categorias --- Start -->
 				<div class="row">
 					<div class="col-12 border-bottom pb-4">
@@ -322,7 +684,7 @@
 									aria-label="max">
 								<button
 									class="btn btn-outline-secondary rounded-0 bg-tienda text-white px-3 border-tienda""
-									type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+									type=" button"><i class="fa-solid fa-magnifying-glass"></i></button>
 								<!-- <button
 								class="btn 
 								type="button"><i class="fa-solid fa-magnifying-glass"></i></button> -->
@@ -536,7 +898,7 @@
 				</div>
 				<!-- img --- End -->
 			</div>
-			<div class="col-8 p-4 mb-5">
+			<div class="col-md-8 col-sm-12 p-4 mb-5 cards-tienda">
 				<div class="row">
 					<div class="col-12 border-bottom">
 						<div class="d-flex justify-content-between">
@@ -552,7 +914,7 @@
 					<div class="col-12 pt-4">
 						<div class="card mb-3 border-0">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 card-img">
 									<img src="img/420-270x400.jpg" class="img-fluid rounded-start" alt="Img">
 								</div>
 								<div class="col-md-7">
@@ -588,7 +950,7 @@
 
 						<div class="card mb-3 border-0">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 card-img">
 									<img src="img/114-270x400.jpg" class="img-fluid rounded-start" alt="Img">
 								</div>
 								<div class="col-md-7">
@@ -624,7 +986,7 @@
 
 						<div class="card mb-3 border-0">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 card-img">
 									<img src="img/45-270x400.jpg" class="img-fluid rounded-start" alt="Img">
 								</div>
 								<div class="col-md-7">
@@ -660,7 +1022,7 @@
 
 						<div class="card mb-3 border-0">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 card-img">
 									<img src="img/420-270x400.jpg" class="img-fluid rounded-start" alt="Img">
 								</div>
 								<div class="col-md-7">
@@ -696,7 +1058,7 @@
 
 						<div class="card mb-3 border-0">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 card-img">
 									<img src="img/1012-270x400.jpg" class="img-fluid rounded-start" alt="Img">
 								</div>
 								<div class="col-md-7">
@@ -731,15 +1093,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row content-paginado">
 					<div class="col-3 border border-start-0 d-flex align-items-center"> </div>
 					<div class="col-6 border">
 						<nav aria-label="Page navigation example">
 							<ul class="pagination justify-content-center mt-3">
 								<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
-									<span aria-hidden="true">&laquo;</span>
-								</a>
+									<a class="page-link" href="#" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+									</a>
 								</li>
 								<li class="page-item"><a class="page-link" href="#">1</a></li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -759,7 +1121,7 @@
 	</div>
 
 	<div class="container-fluid">
-		<div class="row text-dark">
+		<div class="row text-dark redes-sociales">
 			<div class="col-7 border d-flex align-items-center">
 				<p class="mt-3 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 			</div>
@@ -775,8 +1137,8 @@
 		</div>
 	</div>
 
-	<div class="container mt-5">
-		<div class="row px-4 pb-5">
+	<div class="container mt-5 footer-informacion">
+		<div class="row px-4 pb-">
 			<div class="col-3">
 				<p class="text-uppercase fw-bold">Information</p>
 				<ul class="list-group">
