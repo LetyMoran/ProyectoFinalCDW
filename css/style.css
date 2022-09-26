@@ -12,7 +12,7 @@
 }
 
 .border-tienda {
-    border-bottom: 1px solid var(--main-color-tienda) !important;
+    border: 1px solid var(--main-color-tienda) !important;
 }
 
 .show > .nav-link,
@@ -149,6 +149,60 @@
     display: none;
 }
 
+.img-product-car{
+    margin: 0.5em auto;
+}
+
+.group-cantidad{
+    max-width: 140px;
+}
+
+.cantidad-count{
+    border: 1px solid var(--main-color-tienda) !important;
+}
+
+.cantidad-count:hover, .cantidad-count:focus {
+    border: 1px solid var(--main-color-tienda) !important;
+    box-shadow: none;
+}
+.reducir:hover, .agregar:hover, .reducir:active, .agregar:active{
+    background-color: white;
+    box-shadow: 0 0 0 0.25rem rgb(8 180 100 / 26%);
+}
+
+.btn-remove-product{
+    position: absolute;
+    right: 0;
+    height: auto;
+    padding: 0;
+    background: none;
+    font-size: 1.5rem;
+    margin-right: 1em;
+    opacity: 1;
+    font-weight: bold;
+}
+
+#lista-productos-carrito{
+    opacity: 0;
+    position: absolute;
+    right: 1em;
+    z-index: -1;
+    background-color: white;
+    visibility: hidden;
+}
+
+#carrito:hover + #lista-productos-carrito{
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+}
+
+#lista-productos-carrito:hover{
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+}
+
 @media (max-width: 992px){
     .navbar-tienda {
         justify-content: initial !important;
@@ -176,6 +230,29 @@
 
     .card > .row > div{
         width:100%;
+    }
+
+    .content-img-carrito{
+        width: 40%!important;
+    }
+
+    .content-info-carrito{
+        width: 60%!important;
+    }
+
+    .group-cantidad > button{
+        padding: 0!important;
+        padding-left: .2em!important;
+        padding-right: .2em!important;
+        height: 30px;
+    }
+    .group-cantidad > button > svg{
+        margin: 0!important;
+    }
+
+    .input-cantidad{
+        max-width: 40px!important;
+        height: 30px;
     }
 }
 
@@ -288,6 +365,10 @@
     h5{
         font-size: 1rem;
     }
+
+    h6{
+        font-size: .80rem;
+    }
 }
 
 @media (max-width: 368px){
@@ -297,6 +378,14 @@
 
     p, span, i, label, input{
         font-size: .65rem !important;
+    }
+    
+    .navbar-tienda{
+        padding: 0!important;
+    }
+
+    .navbar-brand{
+        margin-right: 0.5rem!important;
     }
 }
 
